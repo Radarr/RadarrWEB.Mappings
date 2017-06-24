@@ -9,8 +9,11 @@
         It is mainly used to correctly map releases (with wrong years or titles) found by <a href="https://radarr.video">Radarr</a> and the corresponding movies on TMDB. However, there is an API available for other projects to use it.
         </p>
         <p>
-	                Current total mappings: 3.
+	                Current total mappings: {{$total_count}}.
         </p>
+              <p>
+                  Current approved mappings: {{$useful_count}}.
+              </p>
       </div>
 
      <div class="row marketing">

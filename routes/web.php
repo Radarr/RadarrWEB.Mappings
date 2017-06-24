@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cache;
 
 Route::get('/', function () {
-    return view('index');
+    $total_count = DB::select("SELECT COUNT(id) as count FROM leonard1_mappings.mappings")[0]->count;
+    $useful_count = DB::select("SELECT COUNT(id) as count FROM leonard1_mappings.mappings WHERE votes >= 3")[0]->count;
+    return view('index', ["total_count" => $total_count, "useful_count" => $useful_count]);
 });
 
 Route::get('/movie/{id}', function ($id) {
