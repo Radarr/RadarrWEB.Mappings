@@ -102,7 +102,7 @@ $('#search').typeahead({
 });
 
 function sub(scope){
-    window.location = "{{url("")}}" + "search/" + $("#search").val();
+    window.location = "{{url("")}}" + "/search/" + $("#search").val();
     return false;
 }
 
