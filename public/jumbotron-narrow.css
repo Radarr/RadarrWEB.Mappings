@@ -76,7 +76,23 @@ h1 {
 	margin: 0px;
 }
 
+.tmdb-logo {
+    width: 100%;
+}
+
 @media (max-width: 767px) {
+    .tmdb-logo {
+        width: 40%;
+    }
+
+    .copyright {
+        float: none !important;
+    }
+
+    .tmdb-logo-span {
+        float: none !important;
+    }
+
     .vertical-center {
         display: block; /* Turn off the flexible box layout */
     }

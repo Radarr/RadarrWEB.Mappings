@@ -56,7 +56,17 @@
 
 
       <footer class="footer">
-        <p>&copy; 2017 Radarr</p>
+        <div class="row vertical-center">
+          <div class="col-xs-12 col-sm-10" style="text-align: center;">
+            <span class="pull-left copyright"><p>&copy; 2017 Radarr</p></span>
+          </div>
+          <div class="col-xs-12 col-sm-2" style="text-align: center;">
+            <span class="pull-right tmdb-logo-span"><a href="https://themoviedb.org" target="_blank"><img src="tmdb_logo.svg" class="tmdb-logo"></a></span>
+          </div>
+
+
+        </div>
+
       </footer>
     </div>
     
