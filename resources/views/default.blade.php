@@ -102,8 +102,7 @@ $('#search').typeahead({
 });
 
 function sub(scope){
-    window.location = window.location.href + "/../" + "@yield("base_url")" + "search/" + $("#search").val();
-    console.log(window.location.href + "/../" + "@yield("base_url")" + "search/" + $("#search").val());
+    window.location = "{{url("")}}" + "search/" + $("#search").val();
     return false;
 }
 
