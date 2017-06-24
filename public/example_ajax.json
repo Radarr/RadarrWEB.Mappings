@@ -1,0 +1,16 @@
+[
+	{
+		"id" : 1,
+		"aka_title" : "Harry Potter what?",
+		"report_count" : 15,
+		"total_reports" : 20,
+		"locked" : false
+	},
+	{
+		"id" : 2,
+		"aka_title" : "Harry Potter and smth.",
+		"report_count" : -4,
+		"total_reports" : 5,
+		"locked" : true
+	}
+]
