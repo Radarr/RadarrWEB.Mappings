@@ -134,6 +134,12 @@ h1 {
   font-size: 21px;
 }
 
+
+.highlight {
+    background-color: lightblue !important;
+}
+
+
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;

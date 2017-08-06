@@ -25,6 +25,11 @@ Route::get('/movie/{id}', function ($id) {
     return view('movie', ["movie" => $movie]);
 });
 
+Route::get('/mapping/{id}', function($id) {
+   $movieId = DB::select("SELECT id, tmdbid FROM leonard1_mappings.mappings WHERE id = ?", array($id))[0]->tmdbid;
+   return redirect('/movie/'.$movieId.'#'.$id);
+});
+
 Route::get('/search/{term}', function ($term) {
 
     $results =  Cache::remember($term, 10, function() use ($term){

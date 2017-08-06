@@ -73,6 +73,12 @@
     paging: false,
     info: false,
     searching: false,
+    createdRow : function(row, data, dataIndex) {
+        var hash = window.location.hash.substring(1);
+        if (data.id == hash) {
+            row.className += " highlight";
+        }
+    },
     "columns": [
     { "data": "id" },
     { "data": "info.aka_title" },
@@ -126,7 +132,7 @@
 						text = "Reporting locked";
 						return "<span data-toggle='tooltip' title='"+text+"'>"+img+"<span>";
 		            }
-                    return "<span data-toggle='tooltip' style='cursor:pointer;' title='This mapping is correct.' onclick='vote(this, "+data+", 1);'><i class='fa fa-check fa-lg green-fa' aria-hidden='true'></i></span>&nbsp;&nbsp;<span data-toggle='tooltip' style='cursor:pointer;' title='This mapping is wrong!' onclick='vote(this, "+data+", -1);'><i class='fa fa-times fa-lg red-fa' aria-hidden='true'></i></span>";
+                    return "<span id="+data+" data-toggle='tooltip' style='cursor:pointer;' title='This mapping is correct.' onclick='vote(this, "+data+", 1);'><i class='fa fa-check fa-lg green-fa' aria-hidden='true'></i></span>&nbsp;&nbsp;<span data-toggle='tooltip' style='cursor:pointer;' title='This mapping is wrong!' onclick='vote(this, "+data+", -1);'><i class='fa fa-times fa-lg red-fa' aria-hidden='true'></i></span>";
                 },
                 "targets": 5,
                 "orderable": false
@@ -144,6 +150,12 @@
 	    paging: false,
 	    info: false,
 	    searching: false,
+                            createdRow : function(row, data, dataIndex) {
+        var hash = window.location.hash.substring(1);
+        if (data.id == hash) {
+            row.className += " highlight";
+        }
+        },
         "columns": [
             { "data": "id" },
             { "data": "info.aka_year" },
